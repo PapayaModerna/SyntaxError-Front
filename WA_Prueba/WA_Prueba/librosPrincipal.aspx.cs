@@ -27,6 +27,8 @@ namespace WA_Prueba
                 List<materialDTO> materiales = materialesArray.ToList();
                 dgvLibros.DataSource = materiales;
                 dgvLibros.DataBind();
+
+                cantidadTotalObrasLabel.Text = materiales.Count.ToString("D3");
             }
             catch (Exception ex)
             {
@@ -41,6 +43,8 @@ namespace WA_Prueba
                 rowIndex--;
                 GridViewRow row = dgvLibros.Rows[rowIndex];
                 string idMaterial = row.Cells[0].Text;
+                hfMaterialId.Value = idMaterial;
+
 
                 try
                 {
@@ -53,14 +57,19 @@ namespace WA_Prueba
                         detalleTitulo.InnerText = material.titulo ?? "No disponible";
                         detalleAnio.InnerText = material.anioPublicacion.ToString() ?? "No disponible";
                         detalleCategorias.InnerText = "No disponible";
-                        detalleAutor.InnerText = "No disponible";
                         detalleEditorial.InnerText = "No disponible";
                         detalleDescripcion.InnerText = "No disponible";
                         hfMaterialId.Value = Convert.ToString(idMaterial);
 
-                        // Mostrar los detalles
                         detallesContainer.Style["display"] = "block";  // Cambiamos display a "block" para mostrar el contenedor
                         statsContainer.Style["display"] = "none";
+                        divEjemplares.Style["display"] = "none";
+
+
+                        creadorDTO[] creadoresArray = materialwsClient.listarCreadoresPorMaterial(Convert.ToInt32(idMaterial));
+                        var creadorNombres = creadoresArray.Select(c => c.nombre).ToList();
+                        detalleAutor.InnerText = string.Join(", ", creadorNombres);
+
                     }
                     else
                     {
@@ -72,7 +81,42 @@ namespace WA_Prueba
                     Response.Write("<script>alert('Error al obtener los detalles: " + ex.Message + "');</script>");
                 }
 
-            } 
+            }
+        }
+        protected void btnVerEjemplares_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(hfMaterialId.Value))
+            {
+                int idMaterial = int.Parse(hfMaterialId.Value);
+
+                var ejemplares = materialwsClient.listarEjemplaresMaterial(idMaterial);
+
+                if (ejemplares != null && ejemplares.Any())
+                {
+                    string html = "<ul>";
+                    foreach (var ej in ejemplares)
+                    {
+                        html += $"<li>{ej.idEjemplar} - {ej.disponible}</li>";
+                    }
+                    html += "</ul>";
+
+                    litEjemplares.Text = html;
+                }
+                else
+                {
+                    litEjemplares.Text = "No hay ejemplares para este material.";
+                }
+
+                // Ocultar detallesContainer y mostrar divEjemplares
+                detallesContainer.Style["display"] = "none";
+                divEjemplares.Style["display"] = "block";
+            }
+            else
+            {
+                litEjemplares.Text = "Por favor, selecciona un material primero.";
+                detallesContainer.Style["display"] = "none";
+                divEjemplares.Style["display"] = "block";
+            }
         }
         protected void EliminarMaterial_Click(object sender, EventArgs e)
         {
@@ -80,7 +124,7 @@ namespace WA_Prueba
             {
                 int idMaterial = Convert.ToInt32(hfMaterialId.Value);
                 int result = materialwsClient.eliminarMaterial(idMaterial);
-                if (result>0)
+                if (result > 0)
                 {
                     LoadMateriales();
 
