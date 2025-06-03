@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyHolyLib.Master.cs" Inherits="SyntaxErrorWebApp.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Fonts/css/all.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.7.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    
+    <title>
+        <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body class="<%= BodyCssClass %>">
+     <div class="container-fluid d-flex p-0" style="height: 100vh; overflow: hidden;">
+        <!--Menu Lateral-->
+        <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-5 bg-white text-dark offcanvas-md offcanvas-start"
+             style="width: 300px;height: 100vh;overflow-y: hidden;">
+        <div class="text-center perfil-usuario">    
+             
+                <a href="Usuario.aspx" class="avatar-circle avatar-master mx-auto mb-2">
+                    <span id="lblInicial" runat="server" class="initial"></span>
+                </a>
+            
+            
+            <div id="lblNombreMaster" runat="server" class="fw-bold"></div>
+        </div>
+            <ul class="mynav nav nav-pills flex-column mb-auto">
+                <li class="nav-item mb-5">
+                    <a href="index.aspx">INICIO</a>
+                </li>
+                <li class="nav-item mb-5">
+                    <a href="Recursos.aspx">RECURSOS</a>
+                </li>
+                <li class="nav-item mb-5">
+                    <a href="Reservas.aspx">MIS RESERVAS</a>
+                </li>
+                <li class="nav-item mb-5">
+                    <a href="MisPrestamos.aspx">MIS PRESTAMOS</a>
+                </li>
+            </ul>
+            
+             <!--<div class="d-flex">
+                <i class="fa-solid fa-book me-2"></i>
+                <h6 class="mt-1 mb-0">PUCP - Programación 3</h6>
+            </div>-->
+        </div>
+        <!-- Contenido Derecha -->
+        <div class="flex-fill min-vh-100 overflow-auto" style="height: 100vh; background-color: #F7F7F7;">
+            <!-- Barra superior para dispositivos pequeños -->
+            <div class="p-2 d-md-none d-flex text-white bg-primary">
+                <a data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" class="text-white" href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                
+            </div>
+            <!-- Contenido de la Página Web -->
+            <div class="flex-grow-1 p-0">
+                <form runat="server">
+                    <asp:ContentPlaceHolder ID="cphContenido" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
+                <asp:ContentPlaceHolder ID="cphScripts" runat="server" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
