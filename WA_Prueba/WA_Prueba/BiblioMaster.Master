@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BiblioMaster.master.cs" Inherits="WA_Prueba.BiblioMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="Content/site.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <script src="Scripts/jquery-3.7.1.js"></script>
+    <title>
+        <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <style>
+        /* Estilos para el menú lateral */
+        #sideBarMster .mynav a {
+            color: black !important;
+            text-decoration: none !important;
+            font-weight: bold; /* Añadir negrita */
+        }
+
+        #sideBarMster .mynav li.nav-item {
+            margin-bottom: 15px; /* Ajusta el valor según necesites más o menos espacio */
+        }
+
+        /* Estilos para la barra superior */
+        .navbar-dark .container-fluid {
+            height: fit-content;
+            position: center;
+            margin: 0px;
+            display: flex;
+            justify-content: space-between; /* Alinear a los extremos */
+            align-items: center; /* Centrar verticalmente */
+        }
+
+        .navbar-dark .navbar-brand {
+            margin-right: auto; /* Empujar el dropdown a la derecha */
+            text-align: left; /* Alinear el texto del título a la izquierda */
+        }
+
+        .navbar-dark form.d-flex {
+            margin-left: auto; /* Asegurar que el dropdown se alinea a la derecha */
+        }
+
+        /* Ajustes de responsividad para el layout principal */
+        @media (min-width: 768px) { /* Punto de interrupción 'md' de Bootstrap */
+            #sideBarMster {
+                width: 250px; /* Aseguramos que tenga un ancho fijo */
+                height: 100vh; /* El alto se ajusta a la altura completa de la pantalla */
+                position: fixed; /* Fijamos la barra lateral en su lugar */
+                top: 0;
+                left: 0;
+                background-color: #343a40; /* Fondo oscuro */
+                z-index: 1040; /* Asegura que esté por encima del contenido */
+                overflow-y: auto;
+            }
+            #sideBarMster .mynav a {
+                color: black !important;
+                text-decoration: none !important;
+                font-weight: bold;
+                text-align: center; /* Centra el texto de los enlaces */
+                display: block; /* Hace que los enlaces ocupen toda la línea */
+                margin-bottom: 3cm; /* Espaciado de 3 cm entre cada enlace */
+            }
+
+            /* Ajuste en el margen de los items de la lista */
+            #sideBarMster .mynav li.nav-item {
+                text-align: center; /* Centra el contenido dentro de cada item */
+            }
+
+            .container-fluid.d-flex.p-0.h-100 {
+                height: 100vh; /* Hace que ocupe toda la pantalla */
+            }
+
+             .bg-light.flex-fill.overflow-auto {
+                margin-left: 250px; /* Deja espacio para la barra lateral */
+                height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+                overflow-y: auto; /* Desplazamiento vertical en el contenido */
+            }
+        }
+
+         /* Asegurar que en pantallas pequeñas el offcanvas no afecte el scroll del body principal */
+        body.offcanvas-open {
+            overflow: hidden;
+        }
+        .offcanvas-start {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex p-0 h-100">
+        <div id = "sideBarMster" class="d-flex flex-column flex-shrink-0 p-3 text-white offcanvas-md offcanvas-start">
+            <a href="https://www.pucp.edu.pe" class ="navbar-brand">
+                <img src="Images/pucp.png" width="200" /> <!-- a cambiar por nuestro logo-->
+            </a>
+            <hr>
+            <ul class ="mynav nav nav-pills flex-column mb-auto">
+                <li class="nav-item mb-1">
+                    <a href="librosPrincipal.aspx"><i class="fa-solid fa-warehouse"></i>LIBROS</a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="PrestamosPrincipal.aspx">PRÉSTAMOS</a>
+                </li>
+                <li class="nav-item mb-1">
+                    <a href="ReportesPrincipal.aspx">REPORTES</a>
+                </li>
+            </ul>
+            <hr>
+            <div class ="d-flex">
+                <i class="fa-solid fa-book me-2"></i>
+                <h6 class ="mt-1 mb-0">MYHOLYLIB</h6>
+            </div>
+        </div>
+        <div class ="bg-light flex-fill overflow-auto">
+            <div class="p-2 d-md-none d-flex text-white bg-primary">
+                <a data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" class="text-white" href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <img src="Images/pucp.png" class="ms-3" width="70">
+            </div>
+            <nav class="navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand">Sistema de Bibiliotecas Didáctico!</a>
+                    <form class="d-flex">
+                        <div class="dropdown ps-3">
+                            <button class="btn btn-outline-light dropdown-toggle"
+                                id="btnUser" data-bs-toggle="dropdown" type="button"
+                                aria-expanded="false">
+                                <i class="fas fa-user me-2"></i>JOHN ARZAPALO
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnUser">
+                                <li><a class="dropdown-item" href="#">Ver perfil</a></li>
+                                <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <div class="p-4">
+                <form runat="server">
+                    <asp:ContentPlaceHolder ID="cphContenido" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

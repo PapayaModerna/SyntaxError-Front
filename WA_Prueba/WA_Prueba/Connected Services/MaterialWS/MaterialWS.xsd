@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarMaterial" type="tns:eliminarMaterial" />
+  <xs:element name="eliminarMaterialResponse" type="tns:eliminarMaterialResponse" />
+  <xs:element name="listarTodos" type="tns:listarTodos" />
+  <xs:element name="listarTodosResponse" type="tns:listarTodosResponse" />
+  <xs:element name="modificarMaterial" type="tns:modificarMaterial" />
+  <xs:element name="modificarMaterialResponse" type="tns:modificarMaterialResponse" />
+  <xs:element name="obtenerPorId" type="tns:obtenerPorId" />
+  <xs:element name="obtenerPorIdResponse" type="tns:obtenerPorIdResponse" />
+  <xs:complexType name="listarTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="materialDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioPublicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="edicion" type="xs:string" />
+      <xs:element minOccurs="0" name="editorial" type="tns:editorialDTO" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelDeIngles" />
+      <xs:element minOccurs="0" name="portada" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editorialDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:materialDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+      <xs:element minOccurs="0" name="edicion" type="xs:string" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelDeIngles" />
+      <xs:element minOccurs="0" name="anioPublicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="portada" type="xs:string" />
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMaterialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nivelDeIngles">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

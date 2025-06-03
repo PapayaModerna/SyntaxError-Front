@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bibliows.biblioteca.syntaxerror.com/" targetNamespace="http://bibliows.biblioteca.syntaxerror.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="asociarMaterialCreador" type="tns:asociarMaterialCreador" />
+  <xs:element name="asociarMaterialCreadorResponse" type="tns:asociarMaterialCreadorResponse" />
+  <xs:element name="desasociarMaterialCreador" type="tns:desasociarMaterialCreador" />
+  <xs:element name="desasociarMaterialCreadorResponse" type="tns:desasociarMaterialCreadorResponse" />
+  <xs:element name="existeRelacion" type="tns:existeRelacion" />
+  <xs:element name="existeRelacionResponse" type="tns:existeRelacionResponse" />
+  <xs:element name="listarCreadoresPorMaterial" type="tns:listarCreadoresPorMaterial" />
+  <xs:element name="listarCreadoresPorMaterialResponse" type="tns:listarCreadoresPorMaterialResponse" />
+  <xs:element name="listarMaterialesPorCreador" type="tns:listarMaterialesPorCreador" />
+  <xs:element name="listarMaterialesPorCreadorResponse" type="tns:listarMaterialesPorCreadorResponse" />
+  <xs:complexType name="existeRelacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="existeRelacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="desasociarMaterialCreador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="desasociarMaterialCreadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorCreador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMaterialesPorCreadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="materialDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioPublicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="edicion" type="xs:string" />
+      <xs:element minOccurs="0" name="editorial" type="tns:editorialDTO" />
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelDeIngles" />
+      <xs:element minOccurs="0" name="portada" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editorialDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEditorial" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pais" type="xs:string" />
+      <xs:element minOccurs="0" name="sitioWeb" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreadoresPorMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCreadoresPorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:creadorDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="creadorDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idAutor" type="xs:int" />
+      <xs:element minOccurs="0" name="materno" type="xs:string" />
+      <xs:element minOccurs="0" name="nacionalidad" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="paterno" type="xs:string" />
+      <xs:element minOccurs="0" name="seudonimo" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoAutor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asociarMaterialCreador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+      <xs:element minOccurs="0" name="idCreador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asociarMaterialCreadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nivelDeIngles">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASICO" />
+      <xs:enumeration value="INTERMEDIO" />
+      <xs:enumeration value="AVANZADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoAutor">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AUTOR" />
+      <xs:enumeration value="TRADUCTOR" />
+      <xs:enumeration value="ILUSTRADOR" />
+      <xs:enumeration value="NARRADOR" />
+      <xs:enumeration value="EDITOR" />
+      <xs:enumeration value="GUIONISTA" />
+      <xs:enumeration value="DISENADOR_EDITORIAL" />
+      <xs:enumeration value="OTRO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
