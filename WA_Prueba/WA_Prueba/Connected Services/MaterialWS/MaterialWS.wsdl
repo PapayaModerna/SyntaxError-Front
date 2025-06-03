@@ -5,6 +5,24 @@
       <xsd:import schemaLocation="http://localhost:8080/myholywrapper/MaterialWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
+  <message name="listarCreadoresPorMaterial">
+    <part name="parameters" element="tns:listarCreadoresPorMaterial" />
+  </message>
+  <message name="listarCreadoresPorMaterialResponse">
+    <part name="parameters" element="tns:listarCreadoresPorMaterialResponse" />
+  </message>
+  <message name="listarEjemplaresMaterial">
+    <part name="parameters" element="tns:listarEjemplaresMaterial" />
+  </message>
+  <message name="listarEjemplaresMaterialResponse">
+    <part name="parameters" element="tns:listarEjemplaresMaterialResponse" />
+  </message>
+  <message name="obtenerPorId">
+    <part name="parameters" element="tns:obtenerPorId" />
+  </message>
+  <message name="obtenerPorIdResponse">
+    <part name="parameters" element="tns:obtenerPorIdResponse" />
+  </message>
   <message name="listarTodos">
     <part name="parameters" element="tns:listarTodos" />
   </message>
@@ -23,19 +41,19 @@
   <message name="eliminarMaterialResponse">
     <part name="parameters" element="tns:eliminarMaterialResponse" />
   </message>
-  <message name="obtenerPorId">
-    <part name="parameters" element="tns:obtenerPorId" />
-  </message>
-  <message name="obtenerPorIdResponse">
-    <part name="parameters" element="tns:obtenerPorIdResponse" />
-  </message>
-  <message name="listarCreadoresPorMaterial">
-    <part name="parameters" element="tns:listarCreadoresPorMaterial" />
-  </message>
-  <message name="listarCreadoresPorMaterialResponse">
-    <part name="parameters" element="tns:listarCreadoresPorMaterialResponse" />
-  </message>
   <portType name="MaterialWS">
+    <operation name="listarCreadoresPorMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialRequest" message="tns:listarCreadoresPorMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialResponse" message="tns:listarCreadoresPorMaterialResponse" />
+    </operation>
+    <operation name="listarEjemplaresMaterial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialRequest" message="tns:listarEjemplaresMaterial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarEjemplaresMaterialResponse" message="tns:listarEjemplaresMaterialResponse" />
+    </operation>
+    <operation name="obtenerPorId">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdRequest" message="tns:obtenerPorId" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdResponse" message="tns:obtenerPorIdResponse" />
+    </operation>
     <operation name="listarTodos">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosRequest" message="tns:listarTodos" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarTodosResponse" message="tns:listarTodosResponse" />
@@ -48,17 +66,36 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
     </operation>
-    <operation name="obtenerPorId">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdRequest" message="tns:obtenerPorId" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/obtenerPorIdResponse" message="tns:obtenerPorIdResponse" />
-    </operation>
-    <operation name="listarCreadoresPorMaterial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialRequest" message="tns:listarCreadoresPorMaterial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/MaterialWS/listarCreadoresPorMaterialResponse" message="tns:listarCreadoresPorMaterialResponse" />
-    </operation>
   </portType>
   <binding name="MaterialWSPortBinding" type="tns:MaterialWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCreadoresPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEjemplaresMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarTodos">
       <soap:operation soapAction="" />
       <input>
@@ -78,24 +115,6 @@
       </output>
     </operation>
     <operation name="eliminarMaterial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCreadoresPorMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

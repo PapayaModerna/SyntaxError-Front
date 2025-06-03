@@ -185,10 +185,16 @@
     <Content Include="Connected Services\MaterialWS\WA_Prueba.MaterialWS.creadorDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MaterialWS\WA_Prueba.MaterialWS.ejemplarDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MaterialWS\WA_Prueba.MaterialWS.eliminarMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\WA_Prueba.MaterialWS.listarCreadoresPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MaterialWS\WA_Prueba.MaterialWS.listarEjemplaresMaterialResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MaterialWS\WA_Prueba.MaterialWS.listarTodosResponse.datasource">
