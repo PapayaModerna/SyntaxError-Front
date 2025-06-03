@@ -24,6 +24,15 @@ namespace WA_Prueba
         protected global::System.Web.UI.WebControls.GridView dgvLibros;
 
         /// <summary>
+        /// Control btnAgregarMaterial.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarMaterial;
+
+        /// <summary>
         /// Control detallesContainer.
         /// </summary>
         /// <remarks>
@@ -123,6 +132,15 @@ namespace WA_Prueba
         protected global::System.Web.UI.WebControls.Button btnEliminar;
 
         /// <summary>
+        /// Control btnVerEjemplares.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVerEjemplares;
+
+        /// <summary>
         /// Control statsContainer.
         /// </summary>
         /// <remarks>
@@ -130,5 +148,32 @@ namespace WA_Prueba
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl statsContainer;
+
+        /// <summary>
+        /// Control cantidadTotalObrasLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label cantidadTotalObrasLabel;
+
+        /// <summary>
+        /// Control divEjemplares.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divEjemplares;
+
+        /// <summary>
+        /// Control litEjemplares.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litEjemplares;
     }
 }

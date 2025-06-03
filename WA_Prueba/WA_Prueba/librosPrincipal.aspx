@@ -17,13 +17,20 @@
             display: block;
             flex-direction: column;
             align-items: flex-start; /* Mantiene la tabla alineada a la izquierda */
-            overflow-y: auto;
-            height: 100vh;
+            height: 100%;
+        }
+        .table-container {
+            width: 100%;
+            margin-top: 20px;
+            height: 60vh; /* Fija la altura de la tabla */
+            overflow-y: auto; /* Hace que solo la tabla sea desplazable */
         }
 
         h2 {
             font-size: 36px;
             font-weight: bold;
+            margin: 0;
+            padding-bottom: 10px;
         }
 
         .table-container {
@@ -220,6 +227,7 @@
                     </Columns>
                 </asp:GridView>
             </div>
+            <asp:Button ID="btnAgregarMaterial" runat="server" Text="Agregar Nuevo Material" CssClass="action-button" OnClientClick="window.location.href='InsertarMaterial.aspx'; return false;" />
         </div>
 
         <!-- Sección de detalles del libro -->
@@ -239,7 +247,7 @@
             <div class="button-container">
                 <asp:Button ID="btnEditar" runat="server" Text="Editar Material" CssClass="action-button" CommandArgument='<%# Eval("idMaterial") %>' OnClientClick="editarMaterial(this); return false;" />
                 <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="action-button" OnClick="EliminarMaterial_Click" />
-                <button class="action-button">Ver Ejemplares</button>
+                <asp:Button ID="btnVerEjemplares" runat="server" Text="Ver Ejemplares" CssClass="action-button" OnClick="btnVerEjemplares_Click" />
             </div>
 
             <div class="filas-desplegables">
@@ -270,12 +278,15 @@
         <!-- Sección de estadísticas -->
         <div id="statsContainer" class="stats-container" runat="server" style="display: block;">
             <p><strong>CANTIDAD TOTAL DE OBRAS PRESENTES</strong></p>
-            <p>003</p>
+            <asp:Label ID="cantidadTotalObrasLabel" runat="server" Text="0"></asp:Label>
             <p><strong>CANTIDAD TOTAL DE EJEMPLARES</strong></p>
             <p>003</p>
             <p><strong>USUARIOS EN LÍNEA</strong></p>
             <p>123</p>
         </div>
+        <div id="divEjemplares" runat="server" style="display:none; margin-top:20px;">
+        <asp:Literal ID="litEjemplares" runat="server"></asp:Literal>
+    </div>
     </div>
 
     <div id="modalConfirmacion" class="modal">
