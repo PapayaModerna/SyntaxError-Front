@@ -16,24 +16,6 @@ namespace WA_Prueba.SedeWS {
     public interface SedeWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WA_Prueba.SedeWS.obtenerSedeResponse obtenerSede(WA_Prueba.SedeWS.obtenerSedeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse")]
-        System.Threading.Tasks.Task<WA_Prueba.SedeWS.obtenerSedeResponse> obtenerSedeAsync(WA_Prueba.SedeWS.obtenerSedeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WA_Prueba.SedeWS.modificarSedeResponse modificarSede(WA_Prueba.SedeWS.modificarSedeRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse")]
-        System.Threading.Tasks.Task<WA_Prueba.SedeWS.modificarSedeResponse> modificarSedeAsync(WA_Prueba.SedeWS.modificarSedeRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/eliminarSedeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -52,6 +34,15 @@ namespace WA_Prueba.SedeWS {
         System.Threading.Tasks.Task<WA_Prueba.SedeWS.listarSedesResponse> listarSedesAsync(WA_Prueba.SedeWS.listarSedesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WA_Prueba.SedeWS.obtenerSedeResponse obtenerSede(WA_Prueba.SedeWS.obtenerSedeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/obtenerSedeResponse")]
+        System.Threading.Tasks.Task<WA_Prueba.SedeWS.obtenerSedeResponse> obtenerSedeAsync(WA_Prueba.SedeWS.obtenerSedeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -59,6 +50,51 @@ namespace WA_Prueba.SedeWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/insertarSedeResponse")]
         System.Threading.Tasks.Task<WA_Prueba.SedeWS.insertarSedeResponse> insertarSedeAsync(WA_Prueba.SedeWS.insertarSedeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WA_Prueba.SedeWS.modificarSedeResponse modificarSede(WA_Prueba.SedeWS.modificarSedeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/SedeWS/modificarSedeResponse")]
+        System.Threading.Tasks.Task<WA_Prueba.SedeWS.modificarSedeResponse> modificarSedeAsync(WA_Prueba.SedeWS.modificarSedeRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarSedeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        public eliminarSedeRequest() {
+        }
+        
+        public eliminarSedeRequest(int idSede) {
+            this.idSede = idSede;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarSedeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarSedeResponse() {
+        }
+        
+        public eliminarSedeResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -208,6 +244,34 @@ namespace WA_Prueba.SedeWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarSedes", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarSedesRequest {
+        
+        public listarSedesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarSedesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarSedesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WA_Prueba.SedeWS.sedeDTO[] @return;
+        
+        public listarSedesResponse() {
+        }
+        
+        public listarSedesResponse(WA_Prueba.SedeWS.sedeDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class obtenerSedeRequest {
         
@@ -237,6 +301,67 @@ namespace WA_Prueba.SedeWS {
         }
         
         public obtenerSedeResponse(WA_Prueba.SedeWS.sedeDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarSedeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string direccion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string distrito;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string telefonoContacto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correoContacto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool activa;
+        
+        public insertarSedeRequest() {
+        }
+        
+        public insertarSedeRequest(string nombre, string direccion, string distrito, string telefonoContacto, string correoContacto, bool activa) {
+            this.nombre = nombre;
+            this.direccion = direccion;
+            this.distrito = distrito;
+            this.telefonoContacto = telefonoContacto;
+            this.correoContacto = correoContacto;
+            this.activa = activa;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarSedeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarSedeResponse() {
+        }
+        
+        public insertarSedeResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -307,131 +432,6 @@ namespace WA_Prueba.SedeWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarSedeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        public eliminarSedeRequest() {
-        }
-        
-        public eliminarSedeRequest(int idSede) {
-            this.idSede = idSede;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarSedeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarSedeResponse() {
-        }
-        
-        public eliminarSedeResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarSedes", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarSedesRequest {
-        
-        public listarSedesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarSedesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarSedesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WA_Prueba.SedeWS.sedeDTO[] @return;
-        
-        public listarSedesResponse() {
-        }
-        
-        public listarSedesResponse(WA_Prueba.SedeWS.sedeDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSede", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarSedeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string direccion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string distrito;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string telefonoContacto;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correoContacto;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool activa;
-        
-        public insertarSedeRequest() {
-        }
-        
-        public insertarSedeRequest(string nombre, string direccion, string distrito, string telefonoContacto, string correoContacto, bool activa) {
-            this.nombre = nombre;
-            this.direccion = direccion;
-            this.distrito = distrito;
-            this.telefonoContacto = telefonoContacto;
-            this.correoContacto = correoContacto;
-            this.activa = activa;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSedeResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarSedeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarSedeResponse() {
-        }
-        
-        public insertarSedeResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SedeWSChannel : WA_Prueba.SedeWS.SedeWS, System.ServiceModel.IClientChannel {
     }
@@ -457,64 +457,6 @@ namespace WA_Prueba.SedeWS {
         
         public SedeWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WA_Prueba.SedeWS.obtenerSedeResponse WA_Prueba.SedeWS.SedeWS.obtenerSede(WA_Prueba.SedeWS.obtenerSedeRequest request) {
-            return base.Channel.obtenerSede(request);
-        }
-        
-        public WA_Prueba.SedeWS.sedeDTO obtenerSede(int idSede) {
-            WA_Prueba.SedeWS.obtenerSedeRequest inValue = new WA_Prueba.SedeWS.obtenerSedeRequest();
-            inValue.idSede = idSede;
-            WA_Prueba.SedeWS.obtenerSedeResponse retVal = ((WA_Prueba.SedeWS.SedeWS)(this)).obtenerSede(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WA_Prueba.SedeWS.obtenerSedeResponse> WA_Prueba.SedeWS.SedeWS.obtenerSedeAsync(WA_Prueba.SedeWS.obtenerSedeRequest request) {
-            return base.Channel.obtenerSedeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WA_Prueba.SedeWS.obtenerSedeResponse> obtenerSedeAsync(int idSede) {
-            WA_Prueba.SedeWS.obtenerSedeRequest inValue = new WA_Prueba.SedeWS.obtenerSedeRequest();
-            inValue.idSede = idSede;
-            return ((WA_Prueba.SedeWS.SedeWS)(this)).obtenerSedeAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WA_Prueba.SedeWS.modificarSedeResponse WA_Prueba.SedeWS.SedeWS.modificarSede(WA_Prueba.SedeWS.modificarSedeRequest request) {
-            return base.Channel.modificarSede(request);
-        }
-        
-        public int modificarSede(int idSede, string nombre, string direccion, string distrito, string telefonoContacto, string correoContacto, bool activa) {
-            WA_Prueba.SedeWS.modificarSedeRequest inValue = new WA_Prueba.SedeWS.modificarSedeRequest();
-            inValue.idSede = idSede;
-            inValue.nombre = nombre;
-            inValue.direccion = direccion;
-            inValue.distrito = distrito;
-            inValue.telefonoContacto = telefonoContacto;
-            inValue.correoContacto = correoContacto;
-            inValue.activa = activa;
-            WA_Prueba.SedeWS.modificarSedeResponse retVal = ((WA_Prueba.SedeWS.SedeWS)(this)).modificarSede(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WA_Prueba.SedeWS.modificarSedeResponse> WA_Prueba.SedeWS.SedeWS.modificarSedeAsync(WA_Prueba.SedeWS.modificarSedeRequest request) {
-            return base.Channel.modificarSedeAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WA_Prueba.SedeWS.modificarSedeResponse> modificarSedeAsync(int idSede, string nombre, string direccion, string distrito, string telefonoContacto, string correoContacto, bool activa) {
-            WA_Prueba.SedeWS.modificarSedeRequest inValue = new WA_Prueba.SedeWS.modificarSedeRequest();
-            inValue.idSede = idSede;
-            inValue.nombre = nombre;
-            inValue.direccion = direccion;
-            inValue.distrito = distrito;
-            inValue.telefonoContacto = telefonoContacto;
-            inValue.correoContacto = correoContacto;
-            inValue.activa = activa;
-            return ((WA_Prueba.SedeWS.SedeWS)(this)).modificarSedeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -562,6 +504,29 @@ namespace WA_Prueba.SedeWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WA_Prueba.SedeWS.obtenerSedeResponse WA_Prueba.SedeWS.SedeWS.obtenerSede(WA_Prueba.SedeWS.obtenerSedeRequest request) {
+            return base.Channel.obtenerSede(request);
+        }
+        
+        public WA_Prueba.SedeWS.sedeDTO obtenerSede(int idSede) {
+            WA_Prueba.SedeWS.obtenerSedeRequest inValue = new WA_Prueba.SedeWS.obtenerSedeRequest();
+            inValue.idSede = idSede;
+            WA_Prueba.SedeWS.obtenerSedeResponse retVal = ((WA_Prueba.SedeWS.SedeWS)(this)).obtenerSede(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WA_Prueba.SedeWS.obtenerSedeResponse> WA_Prueba.SedeWS.SedeWS.obtenerSedeAsync(WA_Prueba.SedeWS.obtenerSedeRequest request) {
+            return base.Channel.obtenerSedeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WA_Prueba.SedeWS.obtenerSedeResponse> obtenerSedeAsync(int idSede) {
+            WA_Prueba.SedeWS.obtenerSedeRequest inValue = new WA_Prueba.SedeWS.obtenerSedeRequest();
+            inValue.idSede = idSede;
+            return ((WA_Prueba.SedeWS.SedeWS)(this)).obtenerSedeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WA_Prueba.SedeWS.insertarSedeResponse WA_Prueba.SedeWS.SedeWS.insertarSede(WA_Prueba.SedeWS.insertarSedeRequest request) {
             return base.Channel.insertarSede(request);
         }
@@ -592,6 +557,41 @@ namespace WA_Prueba.SedeWS {
             inValue.correoContacto = correoContacto;
             inValue.activa = activa;
             return ((WA_Prueba.SedeWS.SedeWS)(this)).insertarSedeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WA_Prueba.SedeWS.modificarSedeResponse WA_Prueba.SedeWS.SedeWS.modificarSede(WA_Prueba.SedeWS.modificarSedeRequest request) {
+            return base.Channel.modificarSede(request);
+        }
+        
+        public int modificarSede(int idSede, string nombre, string direccion, string distrito, string telefonoContacto, string correoContacto, bool activa) {
+            WA_Prueba.SedeWS.modificarSedeRequest inValue = new WA_Prueba.SedeWS.modificarSedeRequest();
+            inValue.idSede = idSede;
+            inValue.nombre = nombre;
+            inValue.direccion = direccion;
+            inValue.distrito = distrito;
+            inValue.telefonoContacto = telefonoContacto;
+            inValue.correoContacto = correoContacto;
+            inValue.activa = activa;
+            WA_Prueba.SedeWS.modificarSedeResponse retVal = ((WA_Prueba.SedeWS.SedeWS)(this)).modificarSede(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WA_Prueba.SedeWS.modificarSedeResponse> WA_Prueba.SedeWS.SedeWS.modificarSedeAsync(WA_Prueba.SedeWS.modificarSedeRequest request) {
+            return base.Channel.modificarSedeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WA_Prueba.SedeWS.modificarSedeResponse> modificarSedeAsync(int idSede, string nombre, string direccion, string distrito, string telefonoContacto, string correoContacto, bool activa) {
+            WA_Prueba.SedeWS.modificarSedeRequest inValue = new WA_Prueba.SedeWS.modificarSedeRequest();
+            inValue.idSede = idSede;
+            inValue.nombre = nombre;
+            inValue.direccion = direccion;
+            inValue.distrito = distrito;
+            inValue.telefonoContacto = telefonoContacto;
+            inValue.correoContacto = correoContacto;
+            inValue.activa = activa;
+            return ((WA_Prueba.SedeWS.SedeWS)(this)).modificarSedeAsync(inValue);
         }
     }
 }

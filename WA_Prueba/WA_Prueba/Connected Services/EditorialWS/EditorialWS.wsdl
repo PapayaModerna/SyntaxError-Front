@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/BiblioWS/EditorialWS?xsd=1" namespace="http://bibliows.biblioteca.syntaxerror.com/" />
     </xsd:schema>
   </types>
-  <message name="modificarEditorial">
-    <part name="parameters" element="tns:modificarEditorial" />
+  <message name="obtenerEditorial">
+    <part name="parameters" element="tns:obtenerEditorial" />
   </message>
-  <message name="modificarEditorialResponse">
-    <part name="parameters" element="tns:modificarEditorialResponse" />
+  <message name="obtenerEditorialResponse">
+    <part name="parameters" element="tns:obtenerEditorialResponse" />
   </message>
   <message name="listarEditoriales">
     <part name="parameters" element="tns:listarEditoriales" />
@@ -17,17 +17,11 @@
   <message name="listarEditorialesResponse">
     <part name="parameters" element="tns:listarEditorialesResponse" />
   </message>
-  <message name="eliminarEditorial">
-    <part name="parameters" element="tns:eliminarEditorial" />
+  <message name="modificarEditorial">
+    <part name="parameters" element="tns:modificarEditorial" />
   </message>
-  <message name="eliminarEditorialResponse">
-    <part name="parameters" element="tns:eliminarEditorialResponse" />
-  </message>
-  <message name="obtenerEditorial">
-    <part name="parameters" element="tns:obtenerEditorial" />
-  </message>
-  <message name="obtenerEditorialResponse">
-    <part name="parameters" element="tns:obtenerEditorialResponse" />
+  <message name="modificarEditorialResponse">
+    <part name="parameters" element="tns:modificarEditorialResponse" />
   </message>
   <message name="insertarEditorial">
     <part name="parameters" element="tns:insertarEditorial" />
@@ -35,31 +29,37 @@
   <message name="insertarEditorialResponse">
     <part name="parameters" element="tns:insertarEditorialResponse" />
   </message>
+  <message name="eliminarEditorial">
+    <part name="parameters" element="tns:eliminarEditorial" />
+  </message>
+  <message name="eliminarEditorialResponse">
+    <part name="parameters" element="tns:eliminarEditorialResponse" />
+  </message>
   <portType name="EditorialWS">
-    <operation name="modificarEditorial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest" message="tns:modificarEditorial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" message="tns:modificarEditorialResponse" />
+    <operation name="obtenerEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest" message="tns:obtenerEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse" message="tns:obtenerEditorialResponse" />
     </operation>
     <operation name="listarEditoriales">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesRequest" message="tns:listarEditoriales" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesResponse" message="tns:listarEditorialesResponse" />
     </operation>
-    <operation name="eliminarEditorial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest" message="tns:eliminarEditorial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse" message="tns:eliminarEditorialResponse" />
-    </operation>
-    <operation name="obtenerEditorial">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest" message="tns:obtenerEditorial" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse" message="tns:obtenerEditorialResponse" />
+    <operation name="modificarEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest" message="tns:modificarEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" message="tns:modificarEditorialResponse" />
     </operation>
     <operation name="insertarEditorial">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialRequest" message="tns:insertarEditorial" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialResponse" message="tns:insertarEditorialResponse" />
     </operation>
+    <operation name="eliminarEditorial">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest" message="tns:eliminarEditorial" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse" message="tns:eliminarEditorialResponse" />
+    </operation>
   </portType>
   <binding name="EditorialWSPortBinding" type="tns:EditorialWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarEditorial">
+    <operation name="obtenerEditorial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,16 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarEditorial">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerEditorial">
+    <operation name="modificarEditorial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,6 +87,15 @@
       </output>
     </operation>
     <operation name="insertarEditorial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEditorial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

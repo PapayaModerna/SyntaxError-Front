@@ -16,15 +16,13 @@ namespace WA_Prueba.EditorialWS {
     public interface EditorialWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WA_Prueba.EditorialWS.modificarEditorialResponse modificarEditorial(WA_Prueba.EditorialWS.modificarEditorialRequest request);
+        WA_Prueba.EditorialWS.obtenerEditorialResponse obtenerEditorial(WA_Prueba.EditorialWS.obtenerEditorialRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" +
-            "")]
-        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.modificarEditorialResponse> modificarEditorialAsync(WA_Prueba.EditorialWS.modificarEditorialRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse")]
+        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.obtenerEditorialResponse> obtenerEditorialAsync(WA_Prueba.EditorialWS.obtenerEditorialRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/listarEditorialesResponse")]
@@ -36,22 +34,15 @@ namespace WA_Prueba.EditorialWS {
         System.Threading.Tasks.Task<WA_Prueba.EditorialWS.listarEditorialesResponse> listarEditorialesAsync(WA_Prueba.EditorialWS.listarEditorialesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WA_Prueba.EditorialWS.eliminarEditorialResponse eliminarEditorial(WA_Prueba.EditorialWS.eliminarEditorialRequest request);
+        WA_Prueba.EditorialWS.modificarEditorialResponse modificarEditorial(WA_Prueba.EditorialWS.modificarEditorialRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse")]
-        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.eliminarEditorialResponse> eliminarEditorialAsync(WA_Prueba.EditorialWS.eliminarEditorialRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WA_Prueba.EditorialWS.obtenerEditorialResponse obtenerEditorial(WA_Prueba.EditorialWS.obtenerEditorialRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/obtenerEditorialResponse")]
-        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.obtenerEditorialResponse> obtenerEditorialAsync(WA_Prueba.EditorialWS.obtenerEditorialRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/modificarEditorialResponse" +
+            "")]
+        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.modificarEditorialResponse> modificarEditorialAsync(WA_Prueba.EditorialWS.modificarEditorialRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialResponse")]
@@ -61,57 +52,15 @@ namespace WA_Prueba.EditorialWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/insertarEditorialResponse")]
         System.Threading.Tasks.Task<WA_Prueba.EditorialWS.insertarEditorialResponse> insertarEditorialAsync(WA_Prueba.EditorialWS.insertarEditorialRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEditorial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarEditorialRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEditorial;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WA_Prueba.EditorialWS.eliminarEditorialResponse eliminarEditorial(WA_Prueba.EditorialWS.eliminarEditorialRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string sitioWeb;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string pais;
-        
-        public modificarEditorialRequest() {
-        }
-        
-        public modificarEditorialRequest(int idEditorial, string nombre, string sitioWeb, string pais) {
-            this.idEditorial = idEditorial;
-            this.nombre = nombre;
-            this.sitioWeb = sitioWeb;
-            this.pais = pais;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEditorialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class modificarEditorialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarEditorialResponse() {
-        }
-        
-        public modificarEditorialResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/EditorialWS/eliminarEditorialResponse")]
+        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.eliminarEditorialResponse> eliminarEditorialAsync(WA_Prueba.EditorialWS.eliminarEditorialRequest request);
     }
     
     /// <remarks/>
@@ -205,70 +154,6 @@ namespace WA_Prueba.EditorialWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEditoriales", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarEditorialesRequest {
-        
-        public listarEditorialesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEditorialesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class listarEditorialesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WA_Prueba.EditorialWS.editorialDTO[] @return;
-        
-        public listarEditorialesResponse() {
-        }
-        
-        public listarEditorialesResponse(WA_Prueba.EditorialWS.editorialDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEditorial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarEditorialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEditorial;
-        
-        public eliminarEditorialRequest() {
-        }
-        
-        public eliminarEditorialRequest(int idEditorial) {
-            this.idEditorial = idEditorial;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEditorialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class eliminarEditorialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarEditorialResponse() {
-        }
-        
-        public eliminarEditorialResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEditorial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class obtenerEditorialRequest {
         
@@ -298,6 +183,85 @@ namespace WA_Prueba.EditorialWS {
         }
         
         public obtenerEditorialResponse(WA_Prueba.EditorialWS.editorialDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEditoriales", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarEditorialesRequest {
+        
+        public listarEditorialesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEditorialesResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class listarEditorialesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WA_Prueba.EditorialWS.editorialDTO[] @return;
+        
+        public listarEditorialesResponse() {
+        }
+        
+        public listarEditorialesResponse(WA_Prueba.EditorialWS.editorialDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEditorial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarEditorialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEditorial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string sitioWeb;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string pais;
+        
+        public modificarEditorialRequest() {
+        }
+        
+        public modificarEditorialRequest(int idEditorial, string nombre, string sitioWeb, string pais) {
+            this.idEditorial = idEditorial;
+            this.nombre = nombre;
+            this.sitioWeb = sitioWeb;
+            this.pais = pais;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEditorialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class modificarEditorialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarEditorialResponse() {
+        }
+        
+        public modificarEditorialResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -348,6 +312,42 @@ namespace WA_Prueba.EditorialWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEditorial", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarEditorialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEditorial;
+        
+        public eliminarEditorialRequest() {
+        }
+        
+        public eliminarEditorialRequest(int idEditorial) {
+            this.idEditorial = idEditorial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEditorialResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class eliminarEditorialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarEditorialResponse() {
+        }
+        
+        public eliminarEditorialResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EditorialWSChannel : WA_Prueba.EditorialWS.EditorialWS, System.ServiceModel.IClientChannel {
     }
@@ -373,6 +373,50 @@ namespace WA_Prueba.EditorialWS {
         
         public EditorialWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WA_Prueba.EditorialWS.obtenerEditorialResponse WA_Prueba.EditorialWS.EditorialWS.obtenerEditorial(WA_Prueba.EditorialWS.obtenerEditorialRequest request) {
+            return base.Channel.obtenerEditorial(request);
+        }
+        
+        public WA_Prueba.EditorialWS.editorialDTO obtenerEditorial(int idEditorial) {
+            WA_Prueba.EditorialWS.obtenerEditorialRequest inValue = new WA_Prueba.EditorialWS.obtenerEditorialRequest();
+            inValue.idEditorial = idEditorial;
+            WA_Prueba.EditorialWS.obtenerEditorialResponse retVal = ((WA_Prueba.EditorialWS.EditorialWS)(this)).obtenerEditorial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.obtenerEditorialResponse> WA_Prueba.EditorialWS.EditorialWS.obtenerEditorialAsync(WA_Prueba.EditorialWS.obtenerEditorialRequest request) {
+            return base.Channel.obtenerEditorialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WA_Prueba.EditorialWS.obtenerEditorialResponse> obtenerEditorialAsync(int idEditorial) {
+            WA_Prueba.EditorialWS.obtenerEditorialRequest inValue = new WA_Prueba.EditorialWS.obtenerEditorialRequest();
+            inValue.idEditorial = idEditorial;
+            return ((WA_Prueba.EditorialWS.EditorialWS)(this)).obtenerEditorialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WA_Prueba.EditorialWS.listarEditorialesResponse WA_Prueba.EditorialWS.EditorialWS.listarEditoriales(WA_Prueba.EditorialWS.listarEditorialesRequest request) {
+            return base.Channel.listarEditoriales(request);
+        }
+        
+        public WA_Prueba.EditorialWS.editorialDTO[] listarEditoriales() {
+            WA_Prueba.EditorialWS.listarEditorialesRequest inValue = new WA_Prueba.EditorialWS.listarEditorialesRequest();
+            WA_Prueba.EditorialWS.listarEditorialesResponse retVal = ((WA_Prueba.EditorialWS.EditorialWS)(this)).listarEditoriales(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.listarEditorialesResponse> WA_Prueba.EditorialWS.EditorialWS.listarEditorialesAsync(WA_Prueba.EditorialWS.listarEditorialesRequest request) {
+            return base.Channel.listarEditorialesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WA_Prueba.EditorialWS.listarEditorialesResponse> listarEditorialesAsync() {
+            WA_Prueba.EditorialWS.listarEditorialesRequest inValue = new WA_Prueba.EditorialWS.listarEditorialesRequest();
+            return ((WA_Prueba.EditorialWS.EditorialWS)(this)).listarEditorialesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -405,73 +449,6 @@ namespace WA_Prueba.EditorialWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WA_Prueba.EditorialWS.listarEditorialesResponse WA_Prueba.EditorialWS.EditorialWS.listarEditoriales(WA_Prueba.EditorialWS.listarEditorialesRequest request) {
-            return base.Channel.listarEditoriales(request);
-        }
-        
-        public WA_Prueba.EditorialWS.editorialDTO[] listarEditoriales() {
-            WA_Prueba.EditorialWS.listarEditorialesRequest inValue = new WA_Prueba.EditorialWS.listarEditorialesRequest();
-            WA_Prueba.EditorialWS.listarEditorialesResponse retVal = ((WA_Prueba.EditorialWS.EditorialWS)(this)).listarEditoriales(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.listarEditorialesResponse> WA_Prueba.EditorialWS.EditorialWS.listarEditorialesAsync(WA_Prueba.EditorialWS.listarEditorialesRequest request) {
-            return base.Channel.listarEditorialesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WA_Prueba.EditorialWS.listarEditorialesResponse> listarEditorialesAsync() {
-            WA_Prueba.EditorialWS.listarEditorialesRequest inValue = new WA_Prueba.EditorialWS.listarEditorialesRequest();
-            return ((WA_Prueba.EditorialWS.EditorialWS)(this)).listarEditorialesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WA_Prueba.EditorialWS.eliminarEditorialResponse WA_Prueba.EditorialWS.EditorialWS.eliminarEditorial(WA_Prueba.EditorialWS.eliminarEditorialRequest request) {
-            return base.Channel.eliminarEditorial(request);
-        }
-        
-        public int eliminarEditorial(int idEditorial) {
-            WA_Prueba.EditorialWS.eliminarEditorialRequest inValue = new WA_Prueba.EditorialWS.eliminarEditorialRequest();
-            inValue.idEditorial = idEditorial;
-            WA_Prueba.EditorialWS.eliminarEditorialResponse retVal = ((WA_Prueba.EditorialWS.EditorialWS)(this)).eliminarEditorial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.eliminarEditorialResponse> WA_Prueba.EditorialWS.EditorialWS.eliminarEditorialAsync(WA_Prueba.EditorialWS.eliminarEditorialRequest request) {
-            return base.Channel.eliminarEditorialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WA_Prueba.EditorialWS.eliminarEditorialResponse> eliminarEditorialAsync(int idEditorial) {
-            WA_Prueba.EditorialWS.eliminarEditorialRequest inValue = new WA_Prueba.EditorialWS.eliminarEditorialRequest();
-            inValue.idEditorial = idEditorial;
-            return ((WA_Prueba.EditorialWS.EditorialWS)(this)).eliminarEditorialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WA_Prueba.EditorialWS.obtenerEditorialResponse WA_Prueba.EditorialWS.EditorialWS.obtenerEditorial(WA_Prueba.EditorialWS.obtenerEditorialRequest request) {
-            return base.Channel.obtenerEditorial(request);
-        }
-        
-        public WA_Prueba.EditorialWS.editorialDTO obtenerEditorial(int idEditorial) {
-            WA_Prueba.EditorialWS.obtenerEditorialRequest inValue = new WA_Prueba.EditorialWS.obtenerEditorialRequest();
-            inValue.idEditorial = idEditorial;
-            WA_Prueba.EditorialWS.obtenerEditorialResponse retVal = ((WA_Prueba.EditorialWS.EditorialWS)(this)).obtenerEditorial(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.obtenerEditorialResponse> WA_Prueba.EditorialWS.EditorialWS.obtenerEditorialAsync(WA_Prueba.EditorialWS.obtenerEditorialRequest request) {
-            return base.Channel.obtenerEditorialAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WA_Prueba.EditorialWS.obtenerEditorialResponse> obtenerEditorialAsync(int idEditorial) {
-            WA_Prueba.EditorialWS.obtenerEditorialRequest inValue = new WA_Prueba.EditorialWS.obtenerEditorialRequest();
-            inValue.idEditorial = idEditorial;
-            return ((WA_Prueba.EditorialWS.EditorialWS)(this)).obtenerEditorialAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WA_Prueba.EditorialWS.insertarEditorialResponse WA_Prueba.EditorialWS.EditorialWS.insertarEditorial(WA_Prueba.EditorialWS.insertarEditorialRequest request) {
             return base.Channel.insertarEditorial(request);
         }
@@ -496,6 +473,29 @@ namespace WA_Prueba.EditorialWS {
             inValue.sitioWeb = sitioWeb;
             inValue.pais = pais;
             return ((WA_Prueba.EditorialWS.EditorialWS)(this)).insertarEditorialAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WA_Prueba.EditorialWS.eliminarEditorialResponse WA_Prueba.EditorialWS.EditorialWS.eliminarEditorial(WA_Prueba.EditorialWS.eliminarEditorialRequest request) {
+            return base.Channel.eliminarEditorial(request);
+        }
+        
+        public int eliminarEditorial(int idEditorial) {
+            WA_Prueba.EditorialWS.eliminarEditorialRequest inValue = new WA_Prueba.EditorialWS.eliminarEditorialRequest();
+            inValue.idEditorial = idEditorial;
+            WA_Prueba.EditorialWS.eliminarEditorialResponse retVal = ((WA_Prueba.EditorialWS.EditorialWS)(this)).eliminarEditorial(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WA_Prueba.EditorialWS.eliminarEditorialResponse> WA_Prueba.EditorialWS.EditorialWS.eliminarEditorialAsync(WA_Prueba.EditorialWS.eliminarEditorialRequest request) {
+            return base.Channel.eliminarEditorialAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WA_Prueba.EditorialWS.eliminarEditorialResponse> eliminarEditorialAsync(int idEditorial) {
+            WA_Prueba.EditorialWS.eliminarEditorialRequest inValue = new WA_Prueba.EditorialWS.eliminarEditorialRequest();
+            inValue.idEditorial = idEditorial;
+            return ((WA_Prueba.EditorialWS.EditorialWS)(this)).eliminarEditorialAsync(inValue);
         }
     }
 }

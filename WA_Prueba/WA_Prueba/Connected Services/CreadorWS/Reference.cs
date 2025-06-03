@@ -25,15 +25,6 @@ namespace WA_Prueba.CreadorWS {
         System.Threading.Tasks.Task<WA_Prueba.CreadorWS.modificarCreadorResponse> modificarCreadorAsync(WA_Prueba.CreadorWS.modificarCreadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        WA_Prueba.CreadorWS.listarCreadoresResponse listarCreadores(WA_Prueba.CreadorWS.listarCreadoresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresResponse")]
-        System.Threading.Tasks.Task<WA_Prueba.CreadorWS.listarCreadoresResponse> listarCreadoresAsync(WA_Prueba.CreadorWS.listarCreadoresRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,6 +32,15 @@ namespace WA_Prueba.CreadorWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse")]
         System.Threading.Tasks.Task<WA_Prueba.CreadorWS.insertarCreadorResponse> insertarCreadorAsync(WA_Prueba.CreadorWS.insertarCreadorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WA_Prueba.CreadorWS.listarCreadoresResponse listarCreadores(WA_Prueba.CreadorWS.listarCreadoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresResponse")]
+        System.Threading.Tasks.Task<WA_Prueba.CreadorWS.listarCreadoresResponse> listarCreadoresAsync(WA_Prueba.CreadorWS.listarCreadoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/eliminarCreadorRequest", ReplyAction="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/eliminarCreadorResponse")]
@@ -159,6 +159,72 @@ namespace WA_Prueba.CreadorWS {
         }
         
         public modificarCreadorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCreador", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarCreadorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string paterno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string materno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string seudonimo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WA_Prueba.CreadorWS.tipoAutor tipo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nacionalidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool activo;
+        
+        public insertarCreadorRequest() {
+        }
+        
+        public insertarCreadorRequest(string nombre, string paterno, string materno, string seudonimo, WA_Prueba.CreadorWS.tipoAutor tipo, string nacionalidad, bool activo) {
+            this.nombre = nombre;
+            this.paterno = paterno;
+            this.materno = materno;
+            this.seudonimo = seudonimo;
+            this.tipo = tipo;
+            this.nacionalidad = nacionalidad;
+            this.activo = activo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCreadorResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
+    public partial class insertarCreadorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarCreadorResponse() {
+        }
+        
+        public insertarCreadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -366,72 +432,6 @@ namespace WA_Prueba.CreadorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCreador", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarCreadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string paterno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string materno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string seudonimo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public WA_Prueba.CreadorWS.tipoAutor tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nacionalidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool activo;
-        
-        public insertarCreadorRequest() {
-        }
-        
-        public insertarCreadorRequest(string nombre, string paterno, string materno, string seudonimo, WA_Prueba.CreadorWS.tipoAutor tipo, string nacionalidad, bool activo) {
-            this.nombre = nombre;
-            this.paterno = paterno;
-            this.materno = materno;
-            this.seudonimo = seudonimo;
-            this.tipo = tipo;
-            this.nacionalidad = nacionalidad;
-            this.activo = activo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCreadorResponse", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
-    public partial class insertarCreadorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://bibliows.biblioteca.syntaxerror.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarCreadorResponse() {
-        }
-        
-        public insertarCreadorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCreador", WrapperNamespace="http://bibliows.biblioteca.syntaxerror.com/", IsWrapped=true)]
     public partial class eliminarCreadorRequest {
         
@@ -566,27 +566,6 @@ namespace WA_Prueba.CreadorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WA_Prueba.CreadorWS.listarCreadoresResponse WA_Prueba.CreadorWS.CreadorWS.listarCreadores(WA_Prueba.CreadorWS.listarCreadoresRequest request) {
-            return base.Channel.listarCreadores(request);
-        }
-        
-        public WA_Prueba.CreadorWS.creadorDTO[] listarCreadores() {
-            WA_Prueba.CreadorWS.listarCreadoresRequest inValue = new WA_Prueba.CreadorWS.listarCreadoresRequest();
-            WA_Prueba.CreadorWS.listarCreadoresResponse retVal = ((WA_Prueba.CreadorWS.CreadorWS)(this)).listarCreadores(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WA_Prueba.CreadorWS.listarCreadoresResponse> WA_Prueba.CreadorWS.CreadorWS.listarCreadoresAsync(WA_Prueba.CreadorWS.listarCreadoresRequest request) {
-            return base.Channel.listarCreadoresAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WA_Prueba.CreadorWS.listarCreadoresResponse> listarCreadoresAsync() {
-            WA_Prueba.CreadorWS.listarCreadoresRequest inValue = new WA_Prueba.CreadorWS.listarCreadoresRequest();
-            return ((WA_Prueba.CreadorWS.CreadorWS)(this)).listarCreadoresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         WA_Prueba.CreadorWS.insertarCreadorResponse WA_Prueba.CreadorWS.CreadorWS.insertarCreador(WA_Prueba.CreadorWS.insertarCreadorRequest request) {
             return base.Channel.insertarCreador(request);
         }
@@ -619,6 +598,27 @@ namespace WA_Prueba.CreadorWS {
             inValue.nacionalidad = nacionalidad;
             inValue.activo = activo;
             return ((WA_Prueba.CreadorWS.CreadorWS)(this)).insertarCreadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WA_Prueba.CreadorWS.listarCreadoresResponse WA_Prueba.CreadorWS.CreadorWS.listarCreadores(WA_Prueba.CreadorWS.listarCreadoresRequest request) {
+            return base.Channel.listarCreadores(request);
+        }
+        
+        public WA_Prueba.CreadorWS.creadorDTO[] listarCreadores() {
+            WA_Prueba.CreadorWS.listarCreadoresRequest inValue = new WA_Prueba.CreadorWS.listarCreadoresRequest();
+            WA_Prueba.CreadorWS.listarCreadoresResponse retVal = ((WA_Prueba.CreadorWS.CreadorWS)(this)).listarCreadores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WA_Prueba.CreadorWS.listarCreadoresResponse> WA_Prueba.CreadorWS.CreadorWS.listarCreadoresAsync(WA_Prueba.CreadorWS.listarCreadoresRequest request) {
+            return base.Channel.listarCreadoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WA_Prueba.CreadorWS.listarCreadoresResponse> listarCreadoresAsync() {
+            WA_Prueba.CreadorWS.listarCreadoresRequest inValue = new WA_Prueba.CreadorWS.listarCreadoresRequest();
+            return ((WA_Prueba.CreadorWS.CreadorWS)(this)).listarCreadoresAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

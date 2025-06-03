@@ -11,17 +11,17 @@
   <message name="modificarCreadorResponse">
     <part name="parameters" element="tns:modificarCreadorResponse" />
   </message>
-  <message name="listarCreadores">
-    <part name="parameters" element="tns:listarCreadores" />
-  </message>
-  <message name="listarCreadoresResponse">
-    <part name="parameters" element="tns:listarCreadoresResponse" />
-  </message>
   <message name="insertarCreador">
     <part name="parameters" element="tns:insertarCreador" />
   </message>
   <message name="insertarCreadorResponse">
     <part name="parameters" element="tns:insertarCreadorResponse" />
+  </message>
+  <message name="listarCreadores">
+    <part name="parameters" element="tns:listarCreadores" />
+  </message>
+  <message name="listarCreadoresResponse">
+    <part name="parameters" element="tns:listarCreadoresResponse" />
   </message>
   <message name="eliminarCreador">
     <part name="parameters" element="tns:eliminarCreador" />
@@ -40,13 +40,13 @@
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorRequest" message="tns:modificarCreador" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/modificarCreadorResponse" message="tns:modificarCreadorResponse" />
     </operation>
-    <operation name="listarCreadores">
-      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresRequest" message="tns:listarCreadores" />
-      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresResponse" message="tns:listarCreadoresResponse" />
-    </operation>
     <operation name="insertarCreador">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorRequest" message="tns:insertarCreador" />
       <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/insertarCreadorResponse" message="tns:insertarCreadorResponse" />
+    </operation>
+    <operation name="listarCreadores">
+      <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresRequest" message="tns:listarCreadores" />
+      <output wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/listarCreadoresResponse" message="tns:listarCreadoresResponse" />
     </operation>
     <operation name="eliminarCreador">
       <input wsam:Action="http://bibliows.biblioteca.syntaxerror.com/CreadorWS/eliminarCreadorRequest" message="tns:eliminarCreador" />
@@ -68,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCreadores">
+    <operation name="insertarCreador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCreador">
+    <operation name="listarCreadores">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
